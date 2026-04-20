@@ -1,0 +1,307 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap'); */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=PT+Mono&display=swap");
+
+body {
+  margin: 0;
+  font-family: "PT Mono", monospace !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+}
+.nav-profile-img {
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center top;
+  border: 2px solid #c770f0;
+  box-shadow: 0 0 12px rgba(199, 112, 240, 0.45);
+  display: block;
+}
+
+/* Prevent bootstrap img-fluid from shrinking it */
+.navbar-brand img {
+  max-height: none !important;
+  max-width: none !important;
+}
+
+/* Give logo area enough room */
+.navbar-brand {
+  padding: 0 !important;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Make navbar height proper */
+.navbar,
+.sticky {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  min-height: 90px;
+}
+
+/* =========================
+   HOME SECTION
+========================= */
+.home-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #1b1035 0%, #0d061f 45%, #05010f 100%);
+  perspective: 1200px;
+}
+
+/* Content above effects */
+.home-content {
+  position: relative;
+  z-index: 5;
+}
+
+
+/* =========================
+   GLOWING BLOBS
+========================= */
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(95px);
+  opacity: 0.28;
+  animation: floatBlob 12s ease-in-out infinite;
+}
+
+.blob1 {
+  width: 300px;
+  height: 300px;
+  background: #b84dff;
+  top: 8%;
+  left: 4%;
+  transform: translateZ(40px);
+}
+
+.blob2 {
+  width: 380px;
+  height: 380px;
+  background: #6f42ff;
+  bottom: 8%;
+  right: 5%;
+  transform: translateZ(60px);
+}
+
+.blob3 {
+  width: 240px;
+  height: 240px;
+  background: #ff4ecd;
+  top: 42%;
+  left: 42%;
+  transform: translateZ(30px);
+}
+
+/* =========================
+   3D RINGS
+========================= */
+
+
+
+
+
+@keyframes floatBlob {
+  0% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+  25% {
+    transform: translateY(-25px) translateX(18px) scale(1.05);
+  }
+  50% {
+    transform: translateY(20px) translateX(-18px) scale(0.96);
+  }
+  75% {
+    transform: translateY(-14px) translateX(12px) scale(1.02);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+}
+
+
+
+/* =========================
+   TEXT ABOVE EFFECTS
+========================= */
+.heading,
+.heading-name,
+.main-name,
+.home-about-social h1,
+.home-about-social p {
+  position: relative;
+  z-index: 5;
+}
+
+/* =========================
+   HOME2 / ABOUT SECTION
+========================= */
+.home-about-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  background: radial-gradient(circle at top right, #140a2b 0%, #0d061f 45%, #05010f 100%);
+}
+
+/* Content above background */
+.home-about-content {
+  position: relative;
+  z-index: 5;
+}
+
+/* =========================
+   BACKGROUND LAYER
+========================= */
+.about-bg-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* =========================
+   GLOWING BLOBS
+========================= */
+.about-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(95px);
+  opacity: 0.24;
+  animation: floatAboutBlob 13s ease-in-out infinite;
+}
+
+.about-blob1 {
+  width: 320px;
+  height: 320px;
+  background: #a855f7;
+  top: 10%;
+  left: 5%;
+}
+
+.about-blob2 {
+  width: 280px;
+  height: 280px;
+  background: #ff4ecd;
+  bottom: 8%;
+  right: 6%;
+  animation-delay: 2s;
+}
+
+
+@keyframes floatAboutBlob {
+  0% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+  25% {
+    transform: translateY(-25px) translateX(20px) scale(1.04);
+  }
+  50% {
+    transform: translateY(18px) translateX(-18px) scale(0.97);
+  }
+  75% {
+    transform: translateY(-12px) translateX(10px) scale(1.02);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+}
+
+/* =========================
+   ABOUT TEXT STYLING
+========================= */
+.home-about-description {
+  position: relative;
+  z-index: 5;
+}
+
+.home-about-description h1 {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.home-about-body {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+  letter-spacing: 0.2px;
+}
+
+/* =========================
+   AVATAR SECTION
+========================= */
+.myAvtar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  margin-top: 20px;
+}
+
+.avatar-tilt-card {
+  border-radius: 24px;
+}
+
+.avatar-glow-wrap {
+  position: relative;
+  padding: 20px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(199, 112, 240, 0.18);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(199, 112, 240, 0.12);
+}
+
+.avatar-glow-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 32px;
+  background: radial-gradient(circle, rgba(199, 112, 240, 0.18) 0%, rgba(199, 112, 240, 0.04) 45%, transparent 75%);
+  filter: blur(18px);
+  z-index: -1;
+}
+
+.avatar-img {
+  max-width: 100%;
+  width: 320px;
+  display: block;
+  margin: auto;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .home-about-section {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .home-about-description {
+    text-align: center;
+  }
+
+  .home-about-body {
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  .myAvtar {
+    margin-top: 40px;
+  }
+
+  .avatar-img {
+    width: 240px;
+  }
+}
